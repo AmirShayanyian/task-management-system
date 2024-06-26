@@ -11,9 +11,11 @@
   "license": "ISC",
   "dependencies": {
     "@sequelize/core": "^7.0.0-alpha.37",
+    "auto-bind": "^3.0.0",
     "chalk": "^4.1.2",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "http-status-codes": "^2.3.0",
     "mysql2": "^3.10.1",
     "nodemon": "^3.1.4",
     "swagger-jsdoc": "^6.2.8",
