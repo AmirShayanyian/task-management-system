@@ -6,6 +6,7 @@ const sequelize = new Sequelize({
   username: 'root',
   password: '',
   database: 'task-manager-db',
+  logging: false,
 });
 
 sequelize.sync({ alter: true });

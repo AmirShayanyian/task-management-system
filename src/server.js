@@ -2,6 +2,7 @@ const express = require('express');
 const { MainRouter } = require('./services/router');
 const sequelize = require('./configs/db.config');
 require('dotenv').config();
+require('./models/user.model');
 
 const port = process.env.SERVER_PORT || 3000;
 const app = express();
