@@ -1,5 +1,6 @@
 const { DataTypes } = require('@sequelize/core');
 const sequelize = require('../configs/db.config');
+const { ProjectModel } = require('./project.model');
 
 const Board = sequelize.define(
   'Boards',
@@ -8,19 +9,14 @@ const Board = sequelize.define(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    task_count: {
+    card_count: {
       type: DataTypes.INTEGER,
     },
-    completed_task: {
+    completed_card: {
       type: DataTypes.INTEGER,
-    },
-    task_master: {
-      //
     },
   },
   { timestamps: true, freezeTableName: true }
 );
 
-module.exports = {
-  BoardModel: Board,
-};
+module.exports = Board;

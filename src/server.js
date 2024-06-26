@@ -1,10 +1,8 @@
 const express = require('express');
-const { MainRouter } = require('./services/router');
-const sequelize = require('./configs/db.config');
+const { MainRouter } = require('./routes/router');
 require('dotenv').config();
-require('./models/user.model');
-require('./models/task.model');
-
+const mmd = require('./configs/model.config');
+mmd();
 const port = process.env.SERVER_PORT || 3000;
 const app = express();
 app.use(express.json());

@@ -22,10 +22,7 @@ const Task = sequelize.define(
     priority: {
       type: DataTypes.ENUM('High', 'Medium', 'Low'),
     },
-    assignation: {
-      allowNull: true,
-      //
-    },
+
     deadline: {
       type: DataTypes.DATE,
     },
@@ -35,3 +32,5 @@ const Task = sequelize.define(
     freezeTableName: true,
   }
 );
+
+module.exports = Task;

@@ -1,4 +1,4 @@
-const { DataTypes } = require('@sequelize/core');
+const { DataTypes, Model } = require('@sequelize/core');
 const sequelize = require('../configs/db.config');
 
 const Project = sequelize.define(
@@ -8,13 +8,8 @@ const Project = sequelize.define(
       type: DataTypes.STRING(50),
       acceptsNull: false,
     },
-    boards:{
-        //
-    }
   },
   { timestamps: true, freezeTableName: true }
 );
 
-module.exports = {
-  ProjectModel: Project,
-};
+module.exports = Project;
