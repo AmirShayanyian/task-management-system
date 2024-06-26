@@ -34,12 +34,6 @@ const User = sequelize.define(
   }
 );
 
-async function main() {
-  await User.sync();
-  const user = await User.create({
-    username: 'amir',
-    password: 'admin1234',
-  });
-  console.log(user.dataValues);
-}
-main();
+module.exports = {
+  UserModel: User,
+};
