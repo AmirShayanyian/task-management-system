@@ -8,7 +8,25 @@ const User = sequelize.define(
       allowNull: false,
       type: DataTypes.STRING,
     },
-    password: DataTypes.STRING,
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    first_name: {
+      type: DataTypes.STRING(25),
+      allowNull: true,
+    },
+    last_name: {
+      type: DataTypes.STRING(25),
+      allowNull: true,
+    },
+    age: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+    mobile: {
+      type: DataTypes.STRING(11),
+    },
   },
   {
     freezeTableName: true,
