@@ -6,19 +6,18 @@ const User = sequelize.define(
   {
     username: {
       allowNull: false,
-      type: DataTypes.ENUM('amir','parsa','erfan'),
+      type: DataTypes.STRING,
     },
     password: DataTypes.STRING,
   },
   {
-    sequelize,
     freezeTableName: true,
     timestamps: true,
   }
 );
 
 async function main() {
-  await User.sync({ alter: true });
+  await User.sync();
   const user = await User.create({
     username: 'amir',
     password: 'admin1234',
