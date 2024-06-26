@@ -2,7 +2,7 @@ const { DataTypes } = require('@sequelize/core');
 const sequelize = require('../configs/db.config');
 
 const Task = sequelize.define(
-  'task',
+  'tasks',
   {
     title: {
       allowNull: true,
@@ -16,8 +16,18 @@ const Task = sequelize.define(
       type: DataTypes.ENUM('done', 'pending', 'expired', 'not started'),
       allowNull: true,
     },
-    userID: {
+    task_master: {
       type: DataTypes.INTEGER,
+    },
+    priority: {
+      type: DataTypes.ENUM('High', 'Medium', 'Low'),
+    },
+    assignation: {
+      allowNull: true,
+      //
+    },
+    deadline: {
+      type: DataTypes.DATE,
     },
   },
   {
