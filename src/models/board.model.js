@@ -11,6 +11,9 @@ const Board = sequelize.define(
     task_count: {
       type: DataTypes.INTEGER,
     },
+    completed_task: {
+      type: DataTypes.INTEGER,
+    },
     task_master: {
       //
     },
