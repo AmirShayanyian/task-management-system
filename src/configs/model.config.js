@@ -9,6 +9,8 @@ const mmd = () => {
   Project.hasMany(Board, { as: 'boards' });
   Board.hasMany(Card, { as: 'cards' });
   Card.hasMany(Task, { as: 'tasks' });
+  User.belongsToMany(Task, { through: 'user_task' });
+  Task.belongsToMany(User, { through: 'user_task' });
   sequelize.sync({ force: true });
 };
 module.exports = mmd;
