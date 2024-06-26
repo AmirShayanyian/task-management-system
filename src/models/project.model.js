@@ -8,6 +8,9 @@ const Project = sequelize.define(
       type: DataTypes.STRING(50),
       acceptsNull: false,
     },
+    boards:{
+        //
+    }
   },
   { timestamps: true, freezeTableName: true }
 );
